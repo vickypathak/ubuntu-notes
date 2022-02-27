@@ -1,0 +1,34 @@
+UBUNTU NOTES
+Switch super user : sudo su >> hit enter (its a admin)
+Switch to regular user : su --user name-- >> hit enter (normal user)
+Password change : sudo psswd --user name-- >> hit enter
+apt install : apt-get install >> apt update : apt-get update
+for new terminal : cntrl + L
+for ip : ip addr
+for get hardware property of sys. >>> sudo lshw >>> hit enter.
+for get hardware property of sys. in short >>> sudo lshw -short
+for get cpu info >>> lscpu >>> hit enter
+to install ssh >>> sudo apt install openssh-server >>> hit eneter
+It is a free and open source ssh server. ... ssh replaces insecure rlogin and rsh, and provide secure encrypted communications between two untrusted hosts over an insecure network such as the Internet. Ubuntu Desktop and minimal Ubuntu server do not come with sshd installed.
+for install ifplug >>> sudo apt-get install ifplugd >>> hit enter
+for install net-tools (to run fr ifconfig cmnds) >>> sudo apt-get install net-tools >>> hit enetr
+file and folder creates, edit, move, and delete
+to create file : cat > "filename" ----enter---
+to write text in any file : cat >>filename --- enter in nxt line you write any thing.
+second way to write content : cat > file name --- enter in nxt line write the content
+to see content in the file : cat filename --- enter
+second way to see file content : cat < filename ---enter
+third way to see cat<> filename ---enter--
+to make directory : mkdir "dir. name" ----enter---
+for move files : mv "filename" "dir name" ---enter---
+for delete file : rm "filename" ---enter---
+to see file list in directory : dir "dir. name"
+display file name that should have matching patterns : $grep -l "unix" *
+Sed
+: is used in very purpose like replacing, deleting and many more way (Stream editor).
+Command	use
+Sed 's/replace word/ word that written at place of replace word /g' filename	it can replace the word. s- substitute g- global, i: ignore case sensitive, ; use for multiple replce
+sed -n '2p' filename	for print line -n = numeric, ;(and)_,(to), $(last line),
+sed '7d' or '7!d' filename	d- delete that line or !d except that line delete all
+sed '5i add sentence' or '5a add sentence' filename	i - insert data before line, a- after line
+1. Git and Github 2. Sub dir. and linux file sys. 3. after listing down the file using grep command indentifies those file which match given pattern and put all the file new directory in one comnd #| xargs -r grep -l "phrase" | xargs -r mv -t target-directory.
